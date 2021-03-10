@@ -1,0 +1,189 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabbits are Lovely Animals</title>
+
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+    }
+
+    a {
+        color: coral;
+
+    }
+
+    body .textcontainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        text-align: center;
+        height: 20vh;
+
+    }
+
+    body .textcontainer1 {
+        display: block;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        height: 5vh;
+        text-align: center;
+        color: coral;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 48px;
+
+    }
+
+
+
+    body .particletext {
+        text-align: center;
+        margin: 0 30px;
+        position: relative;
+    }
+
+    body .particletext.fire>.particle {
+        position: absolute;
+        background-color: rgba(255, 193, 7, 0.5);
+        border-radius: 40px;
+        border-top-right-radius: 0px;
+        animation: fires 0.8s linear infinite;
+        transform: rotate(-45deg);
+        opacity: 0;
+
+    }
+
+    body .particletext.fire>.particle:before {
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 50%;
+        top: 60%;
+        left: 60%;
+        border-radius: 45px;
+        position: absolute;
+        border-top-left-radius: 0px;
+
+
+    }
+
+    @keyframes fires {
+        0% {
+            transform: rotate(-70deg) translateY(0%);
+        }
+
+        25% {
+            transform: rotate(-20deg) translateY(-5%);
+            opacity: 1;
+
+        }
+
+        50% {
+            transform: rotate(-70deg) translateY(-10%);
+
+
+        }
+
+        75% {
+            transform: rotate(-70deg) translateY(-20%);
+
+
+        }
+
+        100% {
+            transform: rotate(-70deg) translateY(-40%);
+            opacity: 1;
+
+        }
+    }
+</style>
+<script>
+
+</script>
+
+<body>
+    <h1 class="textcontainer1">RABBITS</h1>
+    <p>Rabbits are ground dwellers that live in environments ranging from desert to tropical forest and wetland. Their
+        natural geographic range in the Western Hemisphere encompasses the middle latitudes. In the Eastern Hemisphere
+        rabbits are found in Europe, portions of Central and Southern Africa, the Indian subcontinent, Sumatra, and
+        Japan. The European rabbit (Oryctolagus cuniculus) has been introduced to many locations around the world, and
+        all breeds of domestic rabbit originate from the European. Nearly half of the world’s rabbit species are in
+        danger of extinction; many are among the most vulnerable of all mammals.</p>
+    <center>
+        <image src="https://tse1.mm.bing.net/th?id=OIP.Z8U2vLmOBHEfGCYZO_1dcgHaFQ&pid=Api&P=0&w=234&h=166" width="500"
+            height="300">
+        </image>
+        <image src="https://images.wisegeek.com/brown-rabbit.jpg" width="500" height="300">
+        </image>
+    </center>
+
+
+    <h2 class="textcontainer1"> Characteristics of Rabbits</h2>
+    <ul>
+        <li>Rabbits are small, furry mammals with long ears, short fluffy tails, and strong, large hind legs. They have
+            2 pairs of sharp incisors (front teeth), one pair on top and one pair on the bottom.
+
+
+
+        </li>
+        <li>Checkered Giant, Flemish Giant, French Lop, Giant Chinchilla
+            Using their powerful hind legs, rabbits move by hopping. They have 4 toes on their hind feet that are long
+            and webbed to keep them from spreading apart as they jump. Their front paws have 5 toes each. Some species
+            of rabbit can reach speeds of 35 to 45 miles per hour (56 to 72 kilometers per hour). Young rabbits seem to
+            walk instead of hop</li>
+        <li>They also have 2 peg teeth behind the top incisors. Their teeth are specifically adapted for gnawing and
+            grow continuously throughout their lives.
+        </li>
+        <li>Domestic rabbits tend to be gentle and affectionate in temperament when properly handled, and commonly enjoy
+            being stroked/petted (especially on the forehead), though they generally dislike being picked up</li>
+        <li>They can get very confiding towards humans especially when you have them as kits but rather not when you try
+            it with a wild rabbit because they're wild as the name already says. And they live in groups of maybe five
+            or six. </li>
+
+    </ul>
+
+
+
+
+
+    <div class="textcontainer">
+        <a class="particletext fire" href="http://dubila.tekcitadel.com/">About Us</a>
+        <a class="particletext fire" href="http://tekcitadel.com/">Visit Us</a>
+        <a class="particletext fire" href="http://dubila.tekcitadel.com/">More</a>
+        <a class="particletext fire" href="">Exit</a>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>function initparticles() {
+            fire();
+        }
+        function fire() {
+            $.each($(".particletext.fire"), function () {
+                var firecount = ($(this).width() / 50) * 20;
+                for (var i = 0; i <= firecount; i++) {
+                    var size = $.rnd(8, 12);
+                    $(this).append('<span class="particle" style="top:' + $.rnd(40, 70) + '%; left:' + $.rnd(-10, 100) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0, 20) / 10) + 's;"></span>');
+                }
+            });
+        }
+
+        jQuery.rnd = function (m, n) {
+            m = parseInt(m);
+            n = parseInt(n);
+            return Math.floor(Math.random() * (n - m + 1)) + m;
+        }
+
+        initparticles();
+    </script>
+
+</body>
+
+</html>
